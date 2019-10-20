@@ -16,10 +16,11 @@ namespace HandlingException
 
         private static void CreateAnotherTestFile()
         {
+            //using: automatically removes resource when not needed
             using (StreamWriter writer = 
-                new StreamWriter(@"C:\Code\BeginningModernCSharp\Lesson 3\AnotherTest.txt"))
+                new StreamWriter(@"C:\Code\Modern-CSharp.Net\Lesson 3\AnotherTestFile.txt"))
             {
-                writer.Write("They student is awesome.");
+                writer.Write("This student is awesome.");
             }
             WriteLine("Done");
         }
