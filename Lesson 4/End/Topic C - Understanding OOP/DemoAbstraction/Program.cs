@@ -9,9 +9,8 @@ namespace DemoAbstraction
             ProductSDK.Product myProduct = new ProductSDK.Product();
             myProduct.ProductID = "100";
             myProduct.ProductName = "Telsa";
-            
-            myProduct.Submit();
 
+            myProduct.Submit();
         }
     }
 }

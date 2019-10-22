@@ -2,24 +2,24 @@
 
 namespace ProductSDK
 {
-    /// <summary>
-    /// 1. What - abstraction
-    /// 2. How
-    /// 3. Made complicated methods private - encapsualtion
-    /// </summary>
     public class Product
     {
+        /// <summary>
+        /// 1. What - abstraction
+        /// 2. How
+        /// 3. Made complicated methods private - encapsulation
+        /// </summary>
         public string ProductID { get; set; }
         public string ProductName { get; set; }
 
         public void Submit()
         {
-            // Add to database.
+            // Add to database
             Validate();
             ConnectToDB();
         }
 
-        // Granular method
+        //Granular methods
         private bool Validate()
         {
             // ProductID & ProductName
@@ -28,10 +28,8 @@ namespace ProductSDK
 
         private bool ConnectToDB()
         {
-            // DB Connect, SQL 
+            //DB Connect SQL
             return true;
         }
-
-
     }
 }
