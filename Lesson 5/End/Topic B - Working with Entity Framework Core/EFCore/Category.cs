@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Packt.CS7
@@ -7,7 +6,6 @@ namespace Packt.CS7
     public class Category
     {
         public int CategoryID { get; set; }
-        [Display(Name = "Category Name")]
         public string CategoryName { get; set; }
 
         [Column(TypeName = "ntext")]
