@@ -9,12 +9,26 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="{StaticResource rainbow}">
-        <StackPanel Orientation="Horizontal">
-            <StackPanel>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <Button Margin="6" Padding="6" Click="clickMeButton_Click" Name="clickMeButton">
                     Click Me
                 </Button>
+                <Slider Value="50" Maximum="100" Minimum="0"
+                        Width="200" Name="slider"/>
+                <TextBlock Text="{Binding ElementName=slider, Path=Value}"
+                           VerticalAlignment="Center" Margin="10"/>
             </StackPanel>
+            <!--Binding a rectangle to a slider element-->
+            <TextBlock>
+                Use the slider below to rotate the square
+            </TextBlock>
+            <Slider Value="0" Minimum="0" Maximum="360" Name="sliderRotation"/>
+            <Rectangle Height="100" Width="100" Fill="Red">
+                <Rectangle.RenderTransform>
+                    <RotateTransform Angle="{Binding ElementName=sliderRotation, Path=Value}"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
         </StackPanel>
     </Grid>
 </Page>
